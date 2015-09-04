@@ -1,6 +1,6 @@
 {
     "name": "zendframework/skeleton-application",
-    "description": "Skeleton Application for ZF2",
+    "description": "Curso Oficial Zend - Code.Education",
     "license": "BSD-3-Clause",
     "keywords": [
         "framework",
@@ -9,6 +9,6 @@
     "homepage": "http://framework.zend.com/",
     "require": {
         "php": ">=5.5",
-        "zendframework/zendframework": "~2.5"
+        "zendframework/zendframework": "2.5.*"
     }
 }
