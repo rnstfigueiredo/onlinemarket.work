@@ -18,4 +18,11 @@ class IndexController extends AbstractActionController
     {
         return new ViewModel();
     }
+    
+    
+    public function exemploAction()
+    {
+        $nome = " Rnst - Zend";
+        return new ViewModel(array('nome'=>$nome));
+    }
 }
