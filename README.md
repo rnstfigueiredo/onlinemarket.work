@@ -1,5 +1,6 @@
 Lab. M2Ex1 2015-09-03-22-00
-
+Lab. M3Ex1
+Lab. M4Ex1
 
 ZendSkeletonApplication
 =======================
@@ -30,7 +31,7 @@ If you don't have composer installed globally then another way to create a new Z
 
         cd my/project/dir
         curl -#L https://github.com/zendframework/ZendSkeletonApplication/tarball/master | tar xz --strip-components=1
-    
+
 
 2. Download composer into your project directory and install the dependencies:
 
