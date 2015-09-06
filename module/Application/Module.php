@@ -19,7 +19,38 @@ class Module
         $eventManager        = $e->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
+        //laboratorio M3Ex1
+        /* item 2
+        In the onBootstrap() method, at the end, attach a listener with the following
+        characteristics:
+          • Listens For: the " MvcEvent::EVENT_DISPATCH " event
+          • Context: current object ==> pode ser $this
+          • Handler: onDispatch
+          • Priority: 100
+        */
+
+        $eventManager->attach(MvcEvent::EVENT_DISPATCH,array($this, "onDispatch"), 100);
+
     }
+
+    //laboratorio M3Ex1
+    /* 3. Define method onDispatch(), which accepts an MvcEvent as an argument.
+
+    */
+    public function onDispatch(MvcEvent $mvce)
+    {
+       //laboratorio M3Ex1
+        /*5. In the onDispatch() method, use the setVariable() method of the view model
+        * (Zend\View\Model\ViewModel) to assign a value of CATEGORY LIST to a variable
+        * categories
+        */
+       //  $ListaCategoria = 0;
+       $viewModel = $mvce->getViewModel();
+       $viewModel->setVariable('categoria', $ListaCategoria);
+
+
+    }
+
 
     public function getConfig()
     {
