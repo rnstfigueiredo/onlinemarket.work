@@ -28,6 +28,8 @@ class Module
           • Handler: onDispatch
           • Priority: 100
         */
+        //http://framework.zend.com/manual/current/en/modules/zend.mvc.mvc-event.html
+        //Name: dispatch ===>Constant: MvcEvent::EVENT_DISPATCH
 
         $eventManager->attach(MvcEvent::EVENT_DISPATCH,array($this, "onDispatch"), 100);
 
@@ -35,7 +37,6 @@ class Module
 
     //laboratorio M3Ex1
     /* 3. Define method onDispatch(), which accepts an MvcEvent as an argument.
-
     */
     public function onDispatch(MvcEvent $mvce)
     {
@@ -44,7 +45,7 @@ class Module
         * (Zend\View\Model\ViewModel) to assign a value of CATEGORY LIST to a variable
         * categories
         */
-       //  $ListaCategoria = 0;
+       $ListaCategoria = "CATEGORY LIST";
        $viewModel = $mvce->getViewModel();
        $viewModel->setVariable('categoria', $ListaCategoria);
 
