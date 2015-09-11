@@ -30,9 +30,7 @@ class Module
         */
         //http://framework.zend.com/manual/current/en/modules/zend.mvc.mvc-event.html
         //Name: dispatch ===>Constant: MvcEvent::EVENT_DISPATCH
-
         $eventManager->attach(MvcEvent::EVENT_DISPATCH,array($this, "onDispatch"), 100);
-
     }
 
     //laboratorio M3Ex1
@@ -40,14 +38,22 @@ class Module
     */
     public function onDispatch(MvcEvent $mvce)
     {
-       //laboratorio M3Ex1
+       //M4Ex1
+       // $sm == ServiceMeneger
+       $sm = $mvce->getApplication()->getServiceManager(); 
+       $categorias = $sm->get("categorias");
+
+
+        //laboratorio M3Ex1
         /*5. In the onDispatch() method, use the setVariable() method of the view model
         * (Zend\View\Model\ViewModel) to assign a value of CATEGORY LIST to a variable
         * categories
         */
-       $ListaCategoria = "CATEGORY LIST";
+       //$ListaCategoria = "CATEGORY LIST"; M3Ex1
        $viewModel = $mvce->getViewModel();
-       $viewModel->setVariable('categoria', $ListaCategoria);
+       //$viewModel->setVariable('categoria', $ListaCategoria);  //M3Ex1
+       
+       $viewModel->setVariable("categorias", $categorias);  // versao lab M4Ex1
 
 
     }

@@ -46,7 +46,20 @@
         <div class="container">
 
           <div class="col-lg-2">
-            <?php echo $this->categoria; ?>
+              <ul>
+            <?php 
+            
+            //echo $this->categoria;  versao do lab M3Ex1
+            
+            // versão lab M4Ex1
+            foreach ($this->categorias as $categoria):
+                echo "<li>{$categoria}</li>";
+                
+            endforeach;
+            // fim da versao lab M4Ex1
+            
+            ?>
+              </ul>
           </div>
           <div class="col-lg-10">
             <?php echo $this->content; ?>

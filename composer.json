@@ -6,7 +6,21 @@
         "framework",
         "zf2"
     ],
-    "homepage": "http://framework.zend.com/",
+    
+    "authors": [
+        {
+            "name": "rnst Figueiredo",
+            "email": "leoni@mfigueiredo.eti.br",
+            "homepage": "http://www.mfigueiredo.eti.br",
+            "role": "Estudante"
+        },
+        {
+            "name": "Code.Education",
+            "email": "atendimento@schoolofnet.com",
+            "homepage": "http://code.education",
+            "role": "Tutoria - Mentoria"
+        }
+    ],
     "require": {
         "php": ">=5.5",
         "zendframework/zendframework": "2.5.*"

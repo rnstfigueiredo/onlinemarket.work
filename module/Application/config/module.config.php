@@ -70,6 +70,31 @@ return array(
         ),
     ),
     'service_manager' => array(
+        //SERVICE MANAGER LAB M4Ex1
+        'services' => array(
+            'categorias' => array(
+                'barter',
+                'beauty',
+                'clothing',
+                'computer',
+                'entertainment',
+                'free',
+                'garden',
+                'general',
+                'health',
+                'household',
+                'phones',
+                'property',
+                'sporting',
+                'tools',
+                'transportation',
+                'wanted'
+            ),
+        ),
+        
+        
+        
+        
         'abstract_factories' => array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
             'Zend\Log\LoggerAbstractServiceFactory',
@@ -78,6 +103,11 @@ return array(
             'translator' => 'Zend\Mvc\Service\TranslatorServiceFactory',
         ),
     ),
+    
+    
+    
+    
+    
     'translator' => array(
         'locale' => 'en_US',
         'translation_file_patterns' => array(
